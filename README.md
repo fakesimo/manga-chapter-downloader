@@ -9,7 +9,7 @@ A simple python script to download manga chapters from online reader sites
 
 ## Usage
 The requirement arguments are:
-* `--url / -u`: the URL from which download the chapter
-* `--folder / -f`: the folder into which put the files
+* `--url / -u` the URL from which download the chapter
+* `--folder / -f` the folder into which put the files
 
 The full list of available arguments can be seen running `python src/downloader.py --help`
