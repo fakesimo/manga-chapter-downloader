@@ -5,6 +5,7 @@ A simple python script to download manga chapters from online reader sites
 * Clone the repo: `git clone https://github.com/fakesimo/manga-chapter-downloader.git`
 * `cd manga-chapter-downloader`
 * Install the dependencies: `pip install -r requirements.txt`
+* Add the selenium drivers as explained [here](https://selenium-python.readthedocs.io/installation.html#drivers)
 * Run it! `python src/downloader.py [OPTIONS]`
 
 ## Usage
