@@ -71,7 +71,7 @@ def downloadChapter(url, folder, verbose, archive_type):
     driver.close()
 
     # Make the archive in case it is wanted
-    if(archive_type and archive_type in ('zip', 'cbz')):
+    if archive_type and archive_type in ('zip', 'cbz'):
         makeArchive(folder, archive_type)
 
     print('Done!')
