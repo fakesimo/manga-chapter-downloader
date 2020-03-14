@@ -5,6 +5,9 @@ import time
 import click
 import requests
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+
+from tqdm import tqdm
 
 
 @click.command()
@@ -38,7 +41,9 @@ def downloadChapter(url, folder, verbose, archive_type):
     print('Starting download process ...')
 
     # Open browser and obtain all the pages
-    driver = webdriver.Firefox()
+    options = Options()
+    options.headless = True
+    driver = webdriver.Firefox(options=options)
     driver.get(url)
 
     # Going to sleep to be sure that the page loads completely
@@ -51,15 +56,13 @@ def downloadChapter(url, folder, verbose, archive_type):
         print(f'Woke up and found {len(pages)} pages')
 
     # Download all the pages
-    for i, p in enumerate(list(filter(lambda p: 'thumb_url' in p, pages))):
+    for p in tqdm(list(filter(lambda p: 'thumb_url' in p, pages))):
 
         # Get the directory. If it doesn't exists, create it
         directory = f'{os.getcwd()}/{folder}'
         if not os.path.isdir(directory):
             os.makedirs(directory)
 
-        if verbose:
-            print(f'Downloading page {i+1}')
         img_url = p['thumb_url']
         response = requests.get(img_url, allow_redirects=False)
 
