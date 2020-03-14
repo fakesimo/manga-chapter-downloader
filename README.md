@@ -1,5 +1,5 @@
 # manga-chapter-downloader
-A simple python script to download manga chapters from online reader sites
+A simple python script to download manga chapters from online reader sites which uses the FoOlSlide software
 
 ## Installation
 * Clone the repo: `git clone https://github.com/fakesimo/manga-chapter-downloader.git`
