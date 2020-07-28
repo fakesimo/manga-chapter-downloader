@@ -2,7 +2,12 @@
 A simple python script to download manga chapters from online reader sites which uses the FoOlSlide software
 
 ## Installation
-Clone the repo:
+Create a conda environment for the project
+```bash
+$ conda create -n manga-downloader python=3.7
+$ conda activate manga-downloader
+```
+Clone the repo
 ```bash
 $ git clone https://github.com/fakesimo/manga-chapter-downloader.git
 ```
@@ -11,7 +16,7 @@ Install the project dependencies
 $ cd manga-chapter-downloader
 $ pip install -r requirements.txt
 ```
-Add the selenium drivers for Firefox as explained [here](https://selenium-python.readthedocs.io/installation.html#drivers)
+And add the selenium drivers for Firefox as explained [here](https://selenium-python.readthedocs.io/installation.html#drivers)
 
 ## Usage
 Run with
