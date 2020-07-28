@@ -29,5 +29,5 @@ The requirement arguments are:
 
 The full list of available arguments can be seen with
 ```bash
-python src/downloader.py --help
+$ python src/downloader.py --help
 ```
